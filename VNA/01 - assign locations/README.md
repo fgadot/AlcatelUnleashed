@@ -5,8 +5,9 @@ It will allow you to automatically assign the correct location to extensions, co
 
 ## Requirements
 - VNA Must have one tenant
-- VNA must have locations setup by the import_ens_zones.sh script 
+- VNA must have locations setup from the import_ens_zones.sh script 
 - The file ens_locations (result of the import_ens_zones script)must be present in the same folder as this script
+- The file phone.csv (VNA Phone/Authorized caller export) must be present in the same folder
 - VNA must have all of its users present and synchronized with the OXE
 
 ## How to use this script:
