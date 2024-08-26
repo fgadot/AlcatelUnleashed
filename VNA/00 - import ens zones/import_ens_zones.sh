@@ -120,7 +120,7 @@ while IFS=, read -r zone_name outgoing_number address1 unit_type unit_number uni
         VALUES ('$uuid', '$clean_zone_name', '$outgoing_number', '$street_number', '$street_name', '$community', '$postalcode', '$state', '$siteID', '$type1', '$type1value');
     " > /dev/null
     imported=$((imported + 1))
-    echo -e "${clean_zone_name}\t${uuid}" > ens_locations
+    echo -e "${clean_zone_name}\t${uuid}" >> ens_locations
 
     # Increment the counter and check if the maximum number of imports is reached
     if [ "$max_imports" -ne -1 ] && [ "$imported" -ge "$max_imports" ]; then
