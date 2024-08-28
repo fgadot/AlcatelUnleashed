@@ -7,6 +7,9 @@ Those scripts were programmed on the fly with no quality check and were not test
 If something does not fit your need, feel free to open a discussion or bug request.
 
 ## List of scripts:
+### OXE / protocol_error.sh
+This script allows you to extract a list of extensions where the phone type differs from the physical phone installed.
+<br><br>
 ### VNA / import_ens_zones.sh
 This script allows you to import ENS Zones into VNA Locations.
 <br><br>
