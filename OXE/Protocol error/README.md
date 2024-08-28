@@ -1,6 +1,6 @@
 # protocol_error.sh
 
-You might find your OXE installation with a ton of protocol error lines in the incident file, like:
+You might find your OXE installation with a ton of protocol error lines in the incident file, like:<br>
 28/08/24 11:30:08 001001M|---/--/-/---|=0:1612=Protocol error on Alcatel 8&9 series, type 13 (neqt 2048)
 
 This means that the physical phone installed does not match the type of phone configured for the extension. 
