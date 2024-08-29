@@ -12,10 +12,19 @@
 
 # Works up to release 100.1
 
+# This variable must be set to your OXE OS Language.
+# English is "Protocol error"
+# French is "Erreur protocolaire"
+ERROR_MESSAGE="Protocol error"
 
-echo -e "\n\n\n"
+
+
+
+
+echo -e "\n\n**********"
+echo "protocol_error.sh -> Looking for incident 1612 / $ERROR_MESSAGE / in the incident log..."
 # Extract neqt numbers from incvisu
-neqt_numbers=$(incvisu | grep "Protocol error" | awk -F 'neqt ' '{print $2}' | tr -d '()' | sort -u)
+neqt_numbers=$(incvisu | grep "$ERROR_MESSAGE" | awk -F 'neqt ' '{print $2}' | tr -d '()' | sort -u)
 
 # Initialize output
 echo -e "Ext\tType\tName"
@@ -26,8 +35,8 @@ for neqt in $neqt_numbers; do
     eqstat_output=$(tool eqstat n "$neqt")
 
   # Extract the info from eqstat
-    dir_nb=$(echo "$eqstat_output" | egrep '[0-9]{5}' | awk '{print $12}' | sed s/\|//)
-    typ_term=$(echo "$eqstat_output" | egrep '[0-9]{5}' | awk '{print $11}' | sed s/\|//)
+    dir_nb=$(echo "$eqstat_output" | egrep '[0-9]{5}' | cut -d\| -f6 | sed 's/ //g')
+    typ_term=$(echo "$eqstat_output" | egrep '[0-9]{5}' | cut -d\| -f5 | sed 's/ //g')
 
   # Extract the name from the database
     name=$(echo "select disp_name from POSTE where numan='$dir_nb';" | cuser | egrep "\-\-> '" | cut -d\' -f2)
