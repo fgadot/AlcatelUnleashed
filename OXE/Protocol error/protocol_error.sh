@@ -26,6 +26,11 @@ echo "protocol_error.sh -> Looking for incident 1612 / $ERROR_MESSAGE / in the i
 # Extract neqt numbers from incvisu
 neqt_numbers=$(incvisu | grep "$ERROR_MESSAGE" | awk -F 'neqt ' '{print $2}' | tr -d '()' | sort -u)
 
+if [ -z "$neqt_numbers" ]; then
+  echo "No error detected!"
+  exit 0
+fi
+
 # Initialize output
 echo -e "Ext\tType\tName"
 
