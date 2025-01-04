@@ -2,3 +2,4 @@
 *.csv
 *.tsv
 *.tmp
+.DS_Store
