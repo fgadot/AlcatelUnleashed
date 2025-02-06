@@ -7,6 +7,8 @@ Those scripts were programmed on the fly with no quality check and were not test
 If something does not fit your need, feel free to open a discussion or bug request.
 
 ## List of scripts:
+### OXE / DID Extractor
+This script allows you to generate a file which will show you what incoming DID is assigned to what extension, what what incoming DID is not assigned to any extension. 
 ### OXE / protocol_error.sh
 This script allows you to extract a list of extensions where the phone type differs from the physical phone installed.
 <br><br>

@@ -1,12 +1,12 @@
-: '
-Software: import_ens_zones.sh
-Author: Frank Gadot <frank@hermes42.com>
-Version: \V1.0\
-
-Usage, changelog: see README.md file
-'
-
 #!/bin/bash
+
+# Software: import_ens_zones.sh
+# Author: Frank Gadot <frank@hermes42.com>
+# Version: \V1.0\
+#
+# Usage, changelog: see README.md file
+
+
 # Database connection parameters
 DB_NAME="vaa"
 DB_USER="postgres"
