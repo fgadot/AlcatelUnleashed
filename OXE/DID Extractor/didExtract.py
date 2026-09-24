@@ -22,7 +22,7 @@ def read_users_file(users_file):
     """ Reads users.txt and extracts Extension, First Name, Last Name """
     users_data = {}
 
-    with open(users_file, encoding="utf-8") as f:
+    with open(users_file, encoding="cp1252", errors="replace") as f:
         reader = csv.reader(f, delimiter="\t")
         next(reader)  # Skip header row
 
@@ -44,7 +44,7 @@ def read_translator_file(translator_file):
     did_to_extension = {}
     processing = False  # Start reading only after finding "Node"
 
-    with open(translator_file, encoding="utf-8") as f:
+    with open(translator_file, encoding="cp1252", errors="replace") as f:
         for line in f:
             line = line.strip()
 
